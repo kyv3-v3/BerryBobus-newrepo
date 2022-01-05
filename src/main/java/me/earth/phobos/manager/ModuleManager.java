@@ -197,9 +197,9 @@ public class ModuleManager
         this.modules.add(new Description());
         if (mc.player.getName().equals("CReb0rn")) {
             this.modules.add(new Move()); }
-        //this.modules.add(new ());
-        //this.modules.add(new ());
-        //this.modules.add(new ());
+        this.modules.add(new OffhandGqrlEdition());
+        this.modules.add(new ChestStealer());
+        this.modules.add(new RenderTest());
         //this.modules.add(new ());
         //this.modules.add(new ());
         //this.modules.add(new ());
