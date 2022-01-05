@@ -2,5 +2,13 @@
 
 <details>
  <summary>How to Build...</summary>
-  gradlew build or ./gradlew build
+ <details>
+  <summary>Windows</summary>
+  gradlew build
+ </details>
+ 
+ <details>
+  <summary>Linux/Mac</summary>
+  ./gradlew build
+ </details>
 </details>
