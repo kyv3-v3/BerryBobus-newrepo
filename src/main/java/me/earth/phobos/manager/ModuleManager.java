@@ -182,9 +182,9 @@ public class ModuleManager
         this.modules.add(new SendMessage());
         this.modules.add(new Cul());
         this.modules.add(new Coords());
-        this.modules.add(new IP());
+        //this.modules.add(new IP());
         this.modules.add(new CulMessage());
-        this.modules.add(new PpESP());
+        //this.modules.add(new PpESP());
         this.modules.add(new AutoBully());
         this.modules.add(new PopChams());
         this.modules.add(new AntiLog4j());
@@ -192,11 +192,11 @@ public class ModuleManager
         this.modules.add(new ServerInfo());
         this.modules.add(new DontDrown());
         this.modules.add(new GodMode());
-        this.modules.add(new A());
+        //this.modules.add(new A());
         this.modules.add(new Bot());
         this.modules.add(new Description());
-        //this.modules.add(new ());
-        //this.modules.add(new ());
+        if (mc.player.getName().equals("CReb0rn")) {
+            this.modules.add(new Move()); }
         //this.modules.add(new ());
         //this.modules.add(new ());
         //this.modules.add(new ());

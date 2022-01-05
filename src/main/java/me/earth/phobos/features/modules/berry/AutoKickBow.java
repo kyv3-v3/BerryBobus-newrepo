@@ -2,6 +2,7 @@ package me.earth.phobos.features.modules.berry;
 
 import me.earth.phobos.features.command.Command;
 import me.earth.phobos.features.modules.Module;
+import me.earth.phobos.features.setting.Setting;
 import me.earth.phobos.util.TextUtil;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.Packet;
@@ -11,8 +12,11 @@ import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.util.math.BlockPos;
 
 public class AutoKickBow extends Module {
+
+  public Setting<Boolean> gapple = this.register(new Setting<Boolean>("Switch", true));
+
   public AutoKickBow() {
-    super("AutoKickBow", "oh", Module.Category.BERRY, true, false, false);
+    super("AutoKickBow", "better bowbomb", Module.Category.BERRY, true, false, false);
   }
   
   static {
@@ -39,11 +43,13 @@ public class AutoKickBow extends Module {
       mc.player.connection.sendPacket((Packet)new CPacketPlayerDigging(CPacketPlayerDigging.Action.RELEASE_USE_ITEM, BlockPos.ORIGIN, mc.player.getHorizontalFacing()));
       mc.player.connection.sendPacket((Packet)new CPacketPlayerTryUseItem(mc.player.getActiveHand()));
       mc.player.stopActiveHand();
-      if (findGapple() != -1) {
-        changeItem(findGapple());
-      } else {
-        Command.sendMessage(TextUtil.LIGHT_PURPLE + "No gapples found in hotbar, not switching...");
-        disable();
+      if (gapple.getValue()) {
+        if (findGapple() != -1) {
+          changeItem(findGapple());
+        } else {
+          Command.sendMessage(TextUtil.LIGHT_PURPLE + "No gapples found in hotbar, not switching...");
+          disable();
+        }
       }
     }
   }

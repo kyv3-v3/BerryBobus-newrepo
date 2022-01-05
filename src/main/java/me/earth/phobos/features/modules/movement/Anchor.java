@@ -17,7 +17,7 @@ class Anchor
         super("Anchor", "Stops all movement if player is above a hole.", Category.MOVEMENT, true, false, false);
     }
 
-    private final Setting<Boolean> pull = this.register(new Setting<Boolean>("Pull", true));
+    private final Setting<Boolean> pull = this.register(new Setting<Boolean>("Pull", false));
     private final Setting<Integer> pitch = this.register(new Setting<Integer>("Pitch", 60, 0, 90, String.valueOf(0)));
 
     private final ArrayList<BlockPos> holes = new ArrayList<BlockPos>();

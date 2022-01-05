@@ -25,23 +25,4 @@ public class Cul
         mc.getConnection().sendPacket((Packet)new CPacketPlayer.Position(Cul.mc.player.posX, Cul.mc.player.posY - 1339.2, Cul.mc.player.posZ, true));
         this.disable();
     }
-
-    public static boolean fullNullCheck() {
-        if (Cul.mc == null) {
-            return true;
-        }
-        if (Cul.mc.player == null) {
-            return true;
-        }
-        if (Cul.mc.player.connection == null) {
-            return true;
-        }
-        if (Cul.mc.player.connection.getNetworkManager() == null) {
-            return true;
-        }
-        if (Cul.mc.player.connection.getNetworkManager().getRemoteAddress() == null) {
-            return true;
-        }
-        return false;
-    }
 }
