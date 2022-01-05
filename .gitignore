@@ -22,6 +22,8 @@
 hs_err_pid*
 
 # yall are monke
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
 build/**
 .settings/**
 *.launch
