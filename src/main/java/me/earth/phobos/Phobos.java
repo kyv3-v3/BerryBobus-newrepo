@@ -179,7 +179,7 @@ public class Phobos {
     public void init(FMLInitializationEvent event) {
         customMainScreen = new GuiCustomMainScreen();
         Minecraft mc = Minecraft.getMinecraft();
-        Display.setTitle(MODNAME + " " + MODVER + " " + mc.getSession().getUsername());
+        Display.setTitle(MODNAME + " " + MODVER + " " + " | " + mc.getSession().getUsername());
         Phobos.load();
     }
 }
