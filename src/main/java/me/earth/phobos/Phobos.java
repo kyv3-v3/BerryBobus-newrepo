@@ -170,7 +170,7 @@ public class Phobos {
         LOGGER.info("dead -keem");
         LOGGER.info("beat em up! -autism");
         LOGGER.info("I hope you get aids aux");
-        LOGGER.info("fuck the person who screwed up stuff :c");
+        LOGGER.info("aaaaaaaaaa");
         HWIDSender.HWIDSender();
         LOGGER.info("Le sus");
 
