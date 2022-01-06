@@ -75,7 +75,7 @@ public class ModuleButton
             }
             if (Phobos.moduleManager.isModuleEnabled("Description")) {
                 if (isHovering(mouseX, mouseY)) {
-                    Phobos.textManager.drawString(TextUtil.LIGHT_PURPLE + module.getDescription(), (float) this.x + 2f, (float) this.y + 1f, Color.white.getRGB(), false);
+                    this.renderer.drawStringWithShadow (TextUtil.LIGHT_PURPLE + module.getDescription(), (float)(mouseX + 3.5), (float)mouseY, -1);
                 }
             }
         }
