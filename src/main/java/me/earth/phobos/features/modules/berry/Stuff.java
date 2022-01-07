@@ -1,5 +1,6 @@
 package me.earth.phobos.features.modules.berry;
 
+import me.earth.phobos.Phobos;
 import me.earth.phobos.features.command.Command;
 import me.earth.phobos.features.modules.Module;
 import me.earth.phobos.features.setting.Setting;
@@ -20,7 +21,7 @@ public class Stuff extends Module {
         if (a.getValue()) {
             if (mc.getSession().getUsername().equals("CReb0rn")) {
                 Command.sendMessage("Welcome ligmaballz!");
-                mc.player.sendChatMessage(".bind clickgui delete");
+                Phobos.commandManager.executeCommand(".bind clickgui delete");
                 Command.sendMessage("gui binded!");
             }
         }

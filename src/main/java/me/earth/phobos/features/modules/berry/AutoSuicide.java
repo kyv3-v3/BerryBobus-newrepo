@@ -9,8 +9,8 @@ import me.earth.phobos.features.setting.Setting;
  */
 public class AutoSuicide extends Module {
 
-    public Setting<Boolean> kill = this.register(new Setting<Boolean>("kill", true));
-    public Setting<Boolean> suicide = this.register(new Setting<Boolean>("suicide", false));
+    public Setting<Boolean> kill = this.register(new Setting<Boolean>("Kill", true));
+    public Setting<Boolean> suicide = this.register(new Setting<Boolean>("Suicide", false));
     public Setting<Boolean> legit = this.register(new Setting<Boolean>("DamageModule", false));
 
     public AutoSuicide() {

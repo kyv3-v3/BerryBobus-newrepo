@@ -1,8 +1,6 @@
 package me.earth.phobos.features.modules.bot;
 
-import me.earth.phobos.event.events.PacketEvent;
 import me.earth.phobos.features.modules.Module;
-import me.earth.phobos.util.hwid.URLReader;
 import net.minecraft.network.play.server.SPacketChat;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

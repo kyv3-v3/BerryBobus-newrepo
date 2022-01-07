@@ -10,6 +10,8 @@ public class DontDrown extends Module {
     }
     @SubscribeEvent
     public void onMove(MoveEvent event) {
+        if (mc.player.isCreative() && mc.player.isElytraFlying()) return;
+        else if (mc.player.isSpectator()) return;
         if (mc.player.inWater) {
             mc.player.jump();
         }

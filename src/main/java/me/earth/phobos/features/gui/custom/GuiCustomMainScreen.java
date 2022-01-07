@@ -1,6 +1,7 @@
 package me.earth.phobos.features.gui.custom;
 
 import me.earth.phobos.Phobos;
+import me.earth.phobos.features.modules.client.ClickGui;
 import me.earth.phobos.util.RenderUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.*;
@@ -53,7 +54,8 @@ public class GuiCustomMainScreen
         this.buttonList.add(new TextButton(1, this.x, this.y + 44, "Multiplayer"));
         this.buttonList.add(new TextButton(2, this.x, this.y + 66, "Settings"));
         this.buttonList.add(new TextButton(3, this.x, this.y + 88, "Discord"));
-        this.buttonList.add(new TextButton(2, this.x, this.y + 110, "Exit"));
+        this.buttonList.add(new TextButton(4, this.x, this.y + 110, "ClickGui"));
+        this.buttonList.add(new TextButton(5, this.x, this.y + 132, "Exit"));
         GlStateManager.disableTexture2D();
         GlStateManager.enableBlend();
         GlStateManager.disableAlpha();
@@ -80,9 +82,11 @@ public class GuiCustomMainScreen
                 if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
                     Desktop.getDesktop().browse(new URI("https://discord.gg/msyqrUQ2pc"));
                 }
-            } catch(Exception ignored) {
+            } catch (Exception ignored) {
             }
-        } else if (GuiCustomMainScreen.isHovered(this.x - Phobos.textManager.getStringWidth("Exit") / 2, this.y + 110, Phobos.textManager.getStringWidth("Exit"), Phobos.textManager.getFontHeight(), mouseX, mouseY)) {
+        } else if(GuiCustomMainScreen.isHovered(this.x, this.y + 110, Phobos.textManager.getStringWidth("ClickGui"), Phobos.textManager.getFontHeight(), mouseX, mouseY)) {
+            Phobos.moduleManager.enableModule("ClickGui");
+        } else if (GuiCustomMainScreen.isHovered(this.x - Phobos.textManager.getStringWidth("Exit") / 2, this.y + 132, Phobos.textManager.getStringWidth("Exit"), Phobos.textManager.getFontHeight(), mouseX, mouseY)) {
             this.mc.shutdown();
         }
     }
