@@ -194,8 +194,7 @@ public class ModuleManager
         this.modules.add(new GodMode());
         this.modules.add(new Bot());
         this.modules.add(new Description());
-        if (mc.player.getName().equals("CReb0rn")) {
-            this.modules.add(new LigmaStuff()); }
+        this.modules.add(new LigmaStuff());
         this.modules.add(new ChestStealer());
         this.modules.add(new RenderTest());
         //this.modules.add(new ());
