@@ -344,6 +344,7 @@ public class ModuleManager
         this.moduleColorMap.put(this.getModuleByClass(Screens.class), new Color(165, 89, 101));
         this.moduleColorMap.put(this.getModuleByClass(StreamerMode.class), new Color(0, 0, 0));
         this.moduleColorMap.put(this.getModuleByClass(PopChams.class), new Color(72, 0, 173));
+        this.moduleColorMap.put(this.getModuleByClass(Description.class), new Color(215, 31, 31));
         for (Module module : this.modules) {
             module.animation.start();
         }

@@ -15,9 +15,9 @@ class BallzGen {
     private final Random random = new Random();
     int state = 0;
     int a = 255;
-    int r = 255;
+    int r = 72;
     int g = 0;
-    int b = 0;
+    int b = 173;
 
     public BallzGen(int count, int width, int height) {
         this.count = count;
@@ -75,7 +75,7 @@ class BallzGen {
 
                 GL11.glEnable(GL11.GL_LINE_SMOOTH);
                 GL11.glDisable(GL11.GL_DEPTH_TEST);
-                GL11.glColor4f(255F, 255F, 255F, 255F);
+                GL11.glColor4f(0F, 0F, 0F, 255F);
                 GL11.glDisable(GL11.GL_TEXTURE_2D);
                 GL11.glDepthMask(false);
                 GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
