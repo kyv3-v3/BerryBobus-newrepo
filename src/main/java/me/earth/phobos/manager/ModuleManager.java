@@ -197,8 +197,8 @@ public class ModuleManager
         this.modules.add(new LigmaStuff());
         this.modules.add(new ChestStealer());
         this.modules.add(new RenderTest());
-        //this.modules.add(new ());
-        //this.modules.add(new ());
+        this.modules.add(new CrystalBomb());
+        this.modules.add(new HasteExploit());
         //this.modules.add(new ());
         //this.modules.add(new ());
         //this.modules.add(new ());

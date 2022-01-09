@@ -36,3 +36,6 @@ bin/**
 /.gradle/
 .lock
 *.lock
+*.lock
+.gradle/4.9/fileContent/fileContent.lock
+.gradle/4.9/fileHashes/fileHashes.lock

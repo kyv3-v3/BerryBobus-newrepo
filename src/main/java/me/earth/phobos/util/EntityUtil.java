@@ -225,6 +225,28 @@ public class EntityUtil implements Util {
         return true;
     }
 
+    public static double[] calculateLookAt(double px, double py, double pz, EntityPlayer me) {
+        double dirx = me.posX - px;
+        double diry = me.posY - py;
+        double dirz = me.posZ - pz;
+
+        double len = Math.sqrt(dirx * dirx + diry * diry + dirz * dirz);
+
+        dirx /= len;
+        diry /= len;
+        dirz /= len;
+
+        double pitch = Math.asin(diry);
+        double yaw = Math.atan2(dirz, dirx);
+
+        pitch = pitch * 180.0d / Math.PI;
+        yaw = yaw * 180.0d / Math.PI;
+
+        yaw += 90f;
+
+        return new double[]{yaw, pitch};
+    }
+
     public static boolean isBedrockHole(final BlockPos blockPos) {
         final BlockPos[] array;
         final BlockPos[] touchingBlocks = array = new BlockPos[]{blockPos.north(), blockPos.south(), blockPos.east(), blockPos.west(), blockPos.down()};

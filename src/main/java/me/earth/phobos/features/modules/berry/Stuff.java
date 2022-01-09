@@ -13,7 +13,7 @@ public class Stuff extends Module {
     private Setting<Boolean> a = this.register(new Setting<>("a", true));
 
     public Stuff() {
-        super("test", "idk", Category.BERRY, true, false, false);
+        super("Test", "idk", Category.BERRY, true, false, false);
     }
 
     @Override
