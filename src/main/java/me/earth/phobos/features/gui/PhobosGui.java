@@ -5,6 +5,7 @@ import me.earth.phobos.features.gui.components.Component;
 import me.earth.phobos.features.gui.components.items.Item;
 import me.earth.phobos.features.gui.components.items.buttons.ModuleButton;
 import me.earth.phobos.features.modules.Module;
+import me.earth.phobos.features.modules.client.Particles;
 import me.earth.phobos.util.BallzGen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 
 public class PhobosGui
         extends GuiScreen {
-    public static BallzGen ballzGen = new BallzGen(100, Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
+    public static BallzGen ballzGen = new BallzGen(250, Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
     private static PhobosGui phobosGui;
     private static PhobosGui INSTANCE;
 
@@ -82,7 +83,9 @@ public class PhobosGui
         this.checkMouseWheel();
         this.drawDefaultBackground();
         this.components.forEach(components -> components.drawScreen(mouseX, mouseY, partialTicks));
-        ballzGen.drawParticles(mouseX, mouseY);
+        if (Phobos.moduleManager.isModuleEnabled("Particles")) {
+            ballzGen.drawParticles(mouseX, mouseY);
+        }
     }
 
     public void mouseClicked(int mouseX, int mouseY, int clickedButton) {
