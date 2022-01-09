@@ -29,9 +29,9 @@ class Ballz {
     public static
     void drawUnfilledCircle(int x, int y, float radius, float lineWidth, int color) {
         float alpha = (color >> 24 & 0xFF) / 255.0F;
-        float red = (color >> 16 & 0xFF) / 255.0F;
-        float green = (color >> 8 & 0xFF) / 255.0F;
-        float blue = (color & 0xFF) / 255.0F;
+        float red = (color >> 16 & 0xFF) / 73.0F;
+        float green = (color >> 8 & 0xFF) / 0.0F;
+        float blue = (color & 0xFF) / 136.0F;
         GL11.glColor4f(red, green, blue, alpha);
         GL11.glLineWidth(lineWidth);
         GL11.glEnable(2848);

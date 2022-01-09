@@ -1,7 +1,6 @@
 package me.earth.phobos.features.modules.client;
 
 import me.earth.phobos.features.command.Command;
-import me.earth.phobos.features.gui.components.items.buttons.ModuleButton;
 import me.earth.phobos.features.modules.Module;
 import me.earth.phobos.features.setting.Setting;
 
@@ -10,7 +9,7 @@ import me.earth.phobos.features.setting.Setting;
  */
 public class CloseMC extends Module {
 
-    public Setting <Boolean> close = this.register(new Setting<Boolean>("close", false));
+    public Setting <Boolean> close = this.register(new Setting<>("close", false));
 
     public CloseMC() {
         super("CloseMC", "close block game", Module.Category.CLIENT, true, false, false);

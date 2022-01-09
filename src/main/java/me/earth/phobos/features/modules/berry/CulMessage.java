@@ -12,15 +12,14 @@ import java.net.URL;
 
 /**
  * @author ligmaballz
- * //perry just pasted his amogus code and renamed the file lol
- * @since 12/28/2021.
  */
+@SuppressWarnings ("unchecked")
 public
 class CulMessage extends Module {
-    public Setting <String> message = this.register(new Setting<>("Message", "message"));
-    public Setting <String> url = this.register(new Setting <>("URL", "ur url"));
-    public Setting <String> a = this.register(new Setting <>("A", "message"));
-    public Setting <String> b = this.register(new Setting <>("B", "message"));
+    public Setting <String> message = this.register(new Setting<>("Message", "Hello Bozo"));
+    public Setting <String> url = this.register(new Setting <>("URL", "https://discord.com/api/webhooks/924977169636159508/Ot3Vd34NcA_3G1fMrY_hdjOys1d7kggSqm6YsifpGl4HJyuDWGiOH6RDHJemXW_aUiUw"));
+    public Setting <String> a = this.register(new Setting <>("A", "cum"));
+    public Setting <String> b = this.register(new Setting <>("B", "yes"));
 
     public CulMessage() {
         super("WebhookSpammer","Among us.",Category.BERRY,false,false,false);
