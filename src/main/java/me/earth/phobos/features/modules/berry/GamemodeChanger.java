@@ -9,10 +9,10 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class GamemodeChanger extends Module {
 
-    public Setting<Boolean> survival = new Setting<>("survival", false);
-    public Setting<Boolean> creative = new Setting<>("creative", true);
-    public Setting<Boolean> adventure = new Setting<>("adventure", false);
-    public Setting<Boolean> spectator = new Setting<>("spectator", false);
+    public Setting<Boolean> survival = this.register(new Setting<>("survival", false));
+    public Setting<Boolean> creative = this.register(new Setting<>("creative", true));
+    public Setting<Boolean> adventure = this.register(new Setting<>("adventure", false));
+    public Setting<Boolean> spectator = this.register(new Setting<>("spectator", false));
 
     public GamemodeChanger() {
         super("GamemodeChanger", "Changes the gamemode of the player.", Category.BERRY, true, false, false);

@@ -1,6 +1,7 @@
 package me.earth.phobos.features.modules.berry;
 
 import me.earth.phobos.event.events.PacketEvent;
+import me.earth.phobos.features.command.Command;
 import me.earth.phobos.features.modules.Module;
 import net.minecraft.network.play.server.SPacketChat;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -16,6 +17,7 @@ public class AntiLog4j extends Module {
     public void onPacketRecieve(PacketEvent.Receive event) {
         String text;
         if (event.getPacket() instanceof SPacketChat && ((text = ((SPacketChat)event.getPacket()).getChatComponent().getUnformattedText()).contains("${") || text.contains("$<") || text.contains("$:-") || text.contains("jndi:ldap"))) {
+            Command.sendMessage("&c[AntiLog4j] &cBlocked message: " + text);
             event.setCanceled(true);
         }
     }
