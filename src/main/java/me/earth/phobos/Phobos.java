@@ -5,8 +5,6 @@ import me.earth.phobos.features.gui.custom.GuiCustomMainScreen;
 import me.earth.phobos.features.modules.client.IRC;
 import me.earth.phobos.features.modules.misc.RPC;
 import me.earth.phobos.manager.*;
-import me.earth.phobos.util.hwid.HWIDSender;
-import me.earth.phobos.util.hwid.Yes;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -27,7 +25,6 @@ public class Phobos {
     public static final String CHAT_SUFFIX = " \u23d0 3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
     public static final String PHOBOS_SUFFIX = " \u23d0 \u1d18\u029c\u1d0f\u0299\u1d0f\ua731";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
-    public static HWIDSender hwidSender;
     public static ModuleManager moduleManager;
     public static SpeedManager speedManager;
     public static PositionManager positionManager;
@@ -67,7 +64,6 @@ public class Phobos {
             reloadManager.unload();
             reloadManager = null;
         }
-        hwidSender = new HWIDSender();
         baritoneManager = new NoStopManager();
         totemPopManager = new TotemPopManager();
         timerManager = new TimerManager();
@@ -117,7 +113,6 @@ public class Phobos {
             baritoneManager.stop();
         }
         Phobos.onUnload();
-        hwidSender = null;
         eventManager = null;
         holeManager = null;
         timerManager = null;
@@ -171,7 +166,6 @@ public class Phobos {
         LOGGER.info("beat em up! -autism");
         LOGGER.info("I hope you get aids aux");
         LOGGER.info("aaaaaaaaaa");
-        HWIDSender.HWIDSender();
         LOGGER.info("Le sus");
 
     }
